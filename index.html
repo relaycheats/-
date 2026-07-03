@@ -11,7 +11,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #050505; /* Pitch black */
+      background: #050505; 
       gap: 50px;
       overflow: hidden;
     }
@@ -20,13 +20,13 @@
       position: relative;
       width: 120px;
       height: 120px;
-      animation: shake 4s infinite; /* Unsettling shake */
+      animation: shake 4s infinite; 
     }
 
     .eye {
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle, #fdfbf7 10%, #e0e0e0 60%, #8a0000 100%); /* Bloodshot gradient */
+      background: radial-gradient(circle, #fdfbf7 10%, #e0e0e0 60%, #8a0000 100%); 
       border-radius: 50%;
       border: 2px solid #300;
       box-shadow: 0 0 20px rgba(139, 0, 0, 0.6), inset 0 0 30px rgba(0,0,0,0.8);
@@ -37,7 +37,7 @@
       align-items: center;
     }
 
-    /* Veins */
+    
     .eye::before {
       content: '';
       position: absolute;
@@ -60,11 +60,11 @@
       z-index: 2;
       box-shadow: 0 0 10px rgba(0,0,0,0.8);
       transition: transform 0.05s ease-out;
-      /* Dilated pupil effect */
+      
       transform: scale(1.2); 
     }
 
-    /* Creepy reflection */
+    
     .pupil::after {
       content: '';
       width: 8px;
@@ -108,13 +108,13 @@
         const deltaY = e.clientY - eyeY;
         const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
         
-        // Increased movement range for a more manic look
+        
         const maxMove = 35; 
 
         const moveX = (deltaX / distance) * Math.min(distance, maxMove);
         const moveY = (deltaY / distance) * Math.min(distance, maxMove);
 
-        // Add a slight random jitter to the movement for instability
+        
         const jitterX = (Math.random() - 0.5) * 2;
         const jitterY = (Math.random() - 0.5) * 2;
 
